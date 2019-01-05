@@ -1,4 +1,4 @@
-# eleventy-plugin-workbox
+# eleventy-plugin-pwa
 
 An [Eleventy](https://11ty.io) plugin to generate service worker.
 Using Google Workbox to generate service-worker.js based on your `dir.output`.
@@ -10,15 +10,15 @@ Since (at this moment) `eleventy` doesn't have any API to do a things after buil
 ## Installation
 
 ```bash
-npm i eleventy-plugin-workbox
+npm i eleventy-plugin-pwa
 ```
 
 #### in Eleventy config file
 
 ```js
-const pluginWorkbox = require("eleventy-plugin-workbox");
+const pluginPWA = require("eleventy-plugin-pwa");
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginWorkbox);
+  eleventyConfig.addPlugin(pluginPWA);
 };
 ```
 
@@ -102,9 +102,9 @@ For example :
 
 ```js
 // overwriting destination file and more
-const pluginWorkbox = require("eleventy-plugin-workbox");
+const pluginPWA = require("eleventy-plugin-pwa");
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginWorkbox, {
+  eleventyConfig.addPlugin(pluginPWA, {
     swDest: "./build/sw.js",
     globDirectory: "./build",
     clientsClaim: true,
