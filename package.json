@@ -1,0 +1,29 @@
+{
+  "name": "eleventy-plugin-workbox",
+  "version": "1.0.0",
+  "description": "An Eleventy plugin to generate service worker using Google Workbox",
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okitavera/eleventy-plugin-workbox.git"
+  },
+  "keywords": [
+    "eleventy-plugin",
+    "eleventy",
+    "workbox",
+    "pwa"
+  ],
+  "author": {
+    "name": "Nanda Oktavera",
+    "email": "codeharuka.yusa@gmail.com",
+    "url": "https://okitavera.me/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "shimmer": "^1.2.0",
+    "workbox-build": "^3.6.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.6.0"
+  }
+}
