@@ -1,11 +1,11 @@
 {
-  "name": "eleventy-plugin-workbox",
+  "name": "eleventy-plugin-pwa",
   "version": "1.0.0",
-  "description": "An Eleventy plugin to generate service worker using Google Workbox",
+  "description": "An Eleventy plugin to generate service worker for PWA using Google Workbox",
   "main": ".eleventy.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/okitavera/eleventy-plugin-workbox.git"
+    "url": "git+https://github.com/okitavera/eleventy-plugin-pwa.git"
   },
   "keywords": [
     "eleventy-plugin",
