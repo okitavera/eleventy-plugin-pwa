@@ -5,6 +5,8 @@ const workbox = require("workbox-build");
 module.exports = (options) => {
   const config = new Eleventy();
   defaultOptions = {
+    importWorkboxFrom: "local",
+    cacheId: "eleventy-plugin-pwa",
     swDest: `${config.outputDir}/service-worker.js`,
     globDirectory: config.outputDir,
     globPatterns: [
