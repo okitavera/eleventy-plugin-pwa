@@ -11,6 +11,16 @@ module.exports = (options) => {
     globDirectory: config.outputDir,
     globPatterns: [
       "**/*.{html,css,js,mjs,map,jpg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}"
+    ],
+    runtimeCaching: [
+      {
+        urlPattern: /^.*\.(jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+        handler: `staleWhileRevalidate`
+      },
+      {
+        urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+        handler: `staleWhileRevalidate`
+      }
     ]
   };
 
