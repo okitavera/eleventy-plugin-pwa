@@ -7,6 +7,8 @@ module.exports = (options) => {
   defaultOptions = {
     importWorkboxFrom: "local",
     cacheId: "eleventy-plugin-pwa",
+    skipWaiting: true,
+    clientsClaim: true,
     swDest: `${config.outputDir}/service-worker.js`,
     globDirectory: config.outputDir,
     globPatterns: [
