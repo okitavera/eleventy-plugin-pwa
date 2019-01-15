@@ -7,8 +7,11 @@ module.exports = (options) => {
   defaultOptions = {
     swDest: `${config.outputDir}/service-worker.js`,
     globDirectory: config.outputDir,
-    globPatterns: ["**/*.{html,css,js,jpg,png,gif,webp,svg,woff2,woff}"]
+    globPatterns: [
+      "**/*.{html,css,js,mjs,map,jpg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}"
+    ]
   };
+
   const opts = Object.assign({}, defaultOptions, options);
   let files = fs.readdirSync(opts.globDirectory);
   if (files.length == 0) {
