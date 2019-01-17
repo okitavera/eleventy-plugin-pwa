@@ -3,7 +3,7 @@ node_js:
   - "node"
 install:
   - yarn
+  - yarn add codecov
 script:
   - yarn test
-  - yarn add codecov
 after_success: yarn coverage

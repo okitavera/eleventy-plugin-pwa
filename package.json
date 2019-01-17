@@ -25,20 +25,15 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.6.0",
-    "ava": "^1.1.0",
-    "nyc": "^13.1.0",
-    "rimraf": "^2.6.3",
-    "sinon": "^7.2.2"
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.3"
   },
   "scripts": {
-    "test": "nyc ava",
-    "coverage": "codecov --file=./coverage/lcov.info"
+    "test": "jest",
+    "coverage": "jest && codecov"
   },
-  "nyc": {
-    "reporter": [
-      "html",
-      "text",
-      "lcov"
-    ]
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
