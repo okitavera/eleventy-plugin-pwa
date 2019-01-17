@@ -5,4 +5,5 @@ install:
   - yarn
 script:
   - yarn test
+  - yarn add codecov
 after_success: yarn coverage
