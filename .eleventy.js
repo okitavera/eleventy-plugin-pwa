@@ -5,12 +5,13 @@ module.exports = {
     function postBuild() {
       const Eleventy = require("@11ty/eleventy/src/Eleventy");
       shimmer.wrap(Eleventy.prototype, "finish", function(orig) {
+        const outputDir = new Eleventy().outputDir;
         process.on("unhandledRejection", (reason) => {
           console.log("Reason: " + reason);
         });
         return function() {
-          const swBuild = require("./builder");
-          swBuild(options);
+          const swBuild = require("./src/builder");
+          swBuild(options, outputDir);
           return orig.apply(this);
         };
       });
