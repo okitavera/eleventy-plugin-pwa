@@ -51,9 +51,7 @@ const pluginPWA = require("eleventy-plugin-pwa");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginPWA, {
     swDest: "./build/sw.js",
-    globDirectory: "./build",
-    clientsClaim: true,
-    skipWaiting: true
+    globDirectory: "./build"
   });
 };
 ```

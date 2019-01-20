@@ -15,7 +15,7 @@ module.exports = (options, outputDir) => {
     ],
     runtimeCaching: [
       {
-        urlPattern: /^.*\.(jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+        urlPattern: /^.*\.(html|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
         handler: `staleWhileRevalidate`
       },
       {
