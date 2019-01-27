@@ -13,32 +13,19 @@ afterAll(() => {
   });
 });
 
-let spyError;
-let spyLog;
-
-beforeEach(() => {
-  spyError = jest.spyOn(console, "error");
-  spyLog = jest.spyOn(console, "log");
+it("dir not exist", async () => {
+  let out = await buildr({}, path.join(stub, "shadow"));
+  await expect(out).toMatch(/^ENOENT/);
 });
 
-afterEach(() => {
-  spyError.mockRestore();
-  spyLog.mockRestore();
-});
-
-it("dir not exist", () => {
-  buildr({}, path.join(stub, "shadow"));
-  expect(spyError).toBeCalled();
-});
-
-it("dir exist but no content to index", () => {
+it("dir exist but no content to index", async () => {
   let dir = path.join(stub, "empty");
   fs.mkdirSync(dir);
-  buildr({}, dir);
-  expect(spyError).toBeCalled();
+  let out = await buildr({}, dir);
+  await expect(out).toMatch(/^No/);
 });
 
 it("dir exist and normal", async () => {
-  await buildr({}, stub);
-  await expect(spyLog).toBeCalled();
+  let out = await buildr({}, stub);
+  await expect(out).toMatch(/precached/);
 });

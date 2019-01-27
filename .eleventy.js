@@ -11,7 +11,7 @@ module.exports = {
         });
         return function() {
           const swBuild = require("./src/builder");
-          swBuild(options, outputDir);
+          swBuild(options, outputDir).then((res) => console.log(res));
           return orig.apply(this);
         };
       });
