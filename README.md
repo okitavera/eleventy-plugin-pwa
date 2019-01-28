@@ -32,9 +32,13 @@ Read more about [Eleventy plugins](https://www.11ty.io/docs/plugins/)
 
 #### Registering Service Worker
 
-- [Eleventy-ways](<https://github.com/okitavera/eleventy-plugin-pwa/wiki/Registering-Service-Worker-(Eleventy-ways)>)
-
-- [Webpack-ways](<https://github.com/okitavera/eleventy-plugin-pwa/wiki/Registering-Service-Worker-(using-webpack.DefinePlugin)>)
+```html
+// in your header templates
+<script>
+  if ("serviceWorker" in navigator)
+    navigator.serviceWorker.register("/service-worker.js");
+</script>
+```
 
 #### Adding Web App Manifest
 
