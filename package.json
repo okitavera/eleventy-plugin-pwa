@@ -21,11 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "shimmer": "^1.2.1",
-    "workbox-build": "^3.6.3"
+    "workbox-build": "^4.3.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
-    "jest": "^23.6.0",
+    "@11ty/eleventy": "^0.8.2",
+    "jest": "^24.7.1",
     "rimraf": "^2.6.3"
   },
   "scripts": {
