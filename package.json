@@ -24,9 +24,9 @@
     "workbox-build": "^4.3.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.2",
-    "jest": "^24.7.1",
-    "rimraf": "^2.6.3"
+    "@11ty/eleventy": "^0.9.0",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0"
   },
   "scripts": {
     "test": "jest",
