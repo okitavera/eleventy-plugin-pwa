@@ -1,7 +1,0 @@
-arrowParens: "always"
-endOfLine: "lf"
-jsxBracketSameLine: true
-semi: true
-singleQuote: false
-trailingComma: "none"
-useTabs: false
